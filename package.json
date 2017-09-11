@@ -7,7 +7,7 @@
     "test": "IMAGE_ID=$(docker build -q .) && docker run --label container-id-test $IMAGE_ID && CONTAINER_ID=$(docker ps -aq -f 'label=container-id-test' --no-trunc) && echo $CONTAINER_ID && docker rm $CONTAINER_ID >/dev/null"
   },
   "engines": {
-    "node": ">= 7.10.1"
+    "node": ">= 7.8"
   },
   "repository": {
     "type": "git",
