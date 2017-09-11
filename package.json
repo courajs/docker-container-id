@@ -1,6 +1,6 @@
 {
   "name": "docker-container-id",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parse /proc/self/cgroup to find you own docker container's id",
   "main": "index.js",
   "scripts": {
