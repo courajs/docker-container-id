@@ -4,7 +4,10 @@
   "description": "Parse /proc/self/cgroup to find you own docker container's id",
   "main": "index.js",
   "scripts": {
-    "test": "IMAGE_ID=$(docker build -q .) && docker run --label container-id-test $IMAGE_ID && CONTAINER_ID=$(docker ps -aq -f 'label=container-id-test' --no-trunc) && echo $CONTAINER_ID && docker rm $CONTAINER_ID >/dev/null && docker rmi $IMAGE_ID >/dev/null"
+    "test": "IMAGE_ID=$(docker build -q .) && docker run --label container-id-test $IMAGE_ID && CONTAINER_ID=$(docker ps -aq -f 'label=container-id-test' --no-trunc) && echo $CONTAINER_ID && docker rm $CONTAINER_ID >/dev/null"
+  },
+  "engines": {
+    "node": ">= 7.10.1"
   },
   "repository": {
     "type": "git",
